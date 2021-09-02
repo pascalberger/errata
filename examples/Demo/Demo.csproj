@@ -14,12 +14,14 @@
 
   <ItemGroup>
     <None Remove="Files\Example.md" />
+    <None Remove="Files\Example2.md" />
     <None Remove="Files\Foo.cpp" />
     <None Remove="Files\Foo.h" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Files\Example.md" />
+    <EmbeddedResource Include="Files\Example2.md" />
     <EmbeddedResource Include="Files\Foo.cpp" />
     <EmbeddedResource Include="Files\Foo.h" />
     <EmbeddedResource Include="Files\Program.cs" />

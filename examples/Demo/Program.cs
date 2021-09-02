@@ -57,6 +57,13 @@ namespace Example
                     .WithLabel(new Label("Demo/Files/Foo.h", 24..38, "See declaration of 'Foo'")
                         .WithColor(Color.Blue)));
 
+            // This will fail
+            report.AddDiagnostic(
+                Diagnostic.Error("This will fail")
+                    .WithLabel(new Label("Demo/Files/Example2.md", new Location(5, 3), "Issue on last character of the line")
+                        .WithColor(Color.Yellow)
+                        .WithLength(1)));
+
             // Render the report
             report.Render(AnsiConsole.Console);
         }
